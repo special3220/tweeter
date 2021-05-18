@@ -16,10 +16,10 @@ form textarea {
   background-color: #f4f1ec;
   border-bottom: 5px solid #545149;
 }
-/* 
-form > textarea ::placeholder {
-  color: red;
-} */
+
+form textarea:focus{
+  outline: none;
+}
 
 form > div {
   display: flex;
