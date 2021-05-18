@@ -1,14 +1,31 @@
+article {
+  border: 5px solid #545149;
+  margin: 2% 0;
+  padding: 2% 2%;
+}
+
 article header {
   background-color:#f4f1ec;
   display: flex;
   justify-content: space-between;
 }
 
-article {
-  border: 5px solid #545149;
-  margin: 2% 0;
+article > header > div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+article > p {
+  padding-top: 1.5em;
 }
 
 article header img {
-  width: 50px;
+  max-width: 80px;
+  padding-right: 0.5em;
+}
+
+article footer {
+  display: flex;
+  justify-content: space-between;
 }
