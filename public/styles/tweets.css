@@ -1,0 +1,14 @@
+article header {
+  background-color:#f4f1ec;
+  display: flex;
+  justify-content: space-between;
+}
+
+article {
+  border: 5px solid #545149;
+  margin: 2% 0;
+}
+
+article header img {
+  width: 50px;
+}

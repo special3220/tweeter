@@ -8,6 +8,7 @@ html {
 }
 *, *:before, *:after {
   box-sizing: inherit;
+  /* border: 2px solid red; */
 }
 
 /*
@@ -31,7 +32,8 @@ body {
    margin: auto;
    background-color: #f4f1ec;
    display: flex;
-   justify-content: center;
+   flex-direction: column;
+   /* justify-content: center; */
  }
 
  main h2 {
