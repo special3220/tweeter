@@ -28,6 +28,12 @@ body {
 
  main {
    width: 90%;
+   margin: auto;
    background-color: #f4f1ec;
-   margin: 0 auto;
+   display: flex;
+   justify-content: center;
+ }
+
+ main h2 {
+   text-align: center;
  }
