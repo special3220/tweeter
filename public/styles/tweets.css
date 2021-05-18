@@ -4,10 +4,11 @@ article {
   padding: 2% 2%;
 }
 
-article header {
+article > header {
   background-color:#f4f1ec;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 article > header > div:first-child {
@@ -16,16 +17,25 @@ article > header > div:first-child {
   justify-content: space-between;
 }
 
-article > p {
-  padding-top: 1.5em;
+article > header > div:nth-child(2) {
+  opacity: 0.5;
 }
 
-article header img {
+article > p {
+  margin-bottom: 0.3em;
+  padding: 1.3em 0.5em;
+  font-weight: 600;
+  border-bottom: 5px solid #545149;
+}
+
+article > header img {
   max-width: 80px;
   padding-right: 0.5em;
 }
 
-article footer {
+article > footer {
+  font-size: 0.7em;
   display: flex;
   justify-content: space-between;
+  padding: 0 0.5em; 
 }
