@@ -21,6 +21,10 @@ form textarea:focus{
   outline: none;
 }
 
+.over-limit {
+  color: red;
+}
+
 form > div {
   display: flex;
   justify-content: space-between;
