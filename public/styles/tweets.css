@@ -4,6 +4,10 @@ article {
   padding: 2% 2%;
 }
 
+article:hover {
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
 article > header {
   background-color:#f4f1ec;
   display: flex;
@@ -38,4 +42,11 @@ article > footer {
   display: flex;
   justify-content: space-between;
   padding: 0 0.5em; 
+}
+article > footer > div:nth-child(2) > i {
+  padding: 0 .2em;
+}
+article > footer > div:nth-child(2) > i:hover {
+  color: goldenrod;
+  cursor: pointer;
 }
