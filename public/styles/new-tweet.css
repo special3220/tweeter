@@ -4,17 +4,22 @@
 }
 
 .new-tweet form {
-  font-weight: 600;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-hr {
-  width: 100%;
-  background: black;
-  border: 2px solid #545149;
+form textarea {
+  font-weight: 600;
+  border: none;
+  resize: none;
+  background-color: #f4f1ec;
+  border-bottom: 5px solid #545149;
 }
+/* 
+form > textarea ::placeholder {
+  color: red;
+} */
 
 form > div {
   display: flex;
