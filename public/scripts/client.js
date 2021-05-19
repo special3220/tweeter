@@ -4,10 +4,10 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-const createTweetElement = function (tweet) {
+const createTweetElement = function(tweet) {
 
   // Function to prevent Cross-Site Scripting
-  const escape = function (str) {
+  const escape = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
@@ -34,9 +34,9 @@ const createTweetElement = function (tweet) {
                       </footer>
                     </article>`);
   return $tweet;
-}
+};
 
-const renderTweets = function (tweets) {
+const renderTweets = function(tweets) {
   // loops through tweets
   for (const tweet of tweets) {
     // calling createTweetElement to create tweet element
@@ -44,18 +44,18 @@ const renderTweets = function (tweets) {
     // Appending tweet element to the tweet container
     $('#tweets-container').prepend(tweetElem);
   }
-}
-const loadTweets = function () {
-  $.get('/tweets', function (data) {
-    renderTweets(data)
-  })
-}
+};
+const loadTweets = function() {
+  $.get('/tweets', function(data) {
+    renderTweets(data);
+  });
+};
 
-$(document).ready(function () {
+$(document).ready(function() {
   const $message = $('.error-message span');
   $message.hide();
   loadTweets();
-  $("#tweet-form").submit(function (e) {
+  $("#tweet-form").submit(function(e) {
     e.preventDefault();
     const $form = $(this);
     const $tweetText = $form.find("textarea");
@@ -77,7 +77,7 @@ $(document).ready(function () {
           let newTweet = createTweetElement(data);
           $('#tweets-container').prepend(newTweet);
           $('.counter').val(140);
-        })
+        });
     }
-  })
-})
+  });
+});
