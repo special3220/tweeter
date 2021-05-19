@@ -60,15 +60,15 @@ $(document).ready(function () {
     const $form = $(this);
     const $tweetText = $form.find("textarea");
     // Hiding error message when use starts inputing again
-    $tweetText.on("input", () => $message.hide());
+    $tweetText.on("input", () => $message.fadeOut(500));
     const tweetLength = $tweetText.val().length;
     const url = $form.attr('action');
     if (!tweetLength) {
       $message.text("Please write your Tweet before submission!");
-      $message.show();
+      $message.fadeIn(500);
     } else if (tweetLength > 140) {
       $message.text("You can't go over 140 characters!");
-      $message.show();
+      $message.fadeIn(500);
     } else {
       $.post(url, $form.serialize())
         .then(data => {
