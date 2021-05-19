@@ -52,18 +52,23 @@ const loadTweets = function () {
 }
 
 $(document).ready(function () {
+  const $message = $('.error-message span');
+  $message.hide();
   loadTweets();
   $("#tweet-form").submit(function (e) {
     e.preventDefault();
     const $form = $(this);
     const $tweetText = $form.find("textarea");
+    // Hiding error message when use starts inputing again
+    $tweetText.on("input", () => $message.hide());
     const tweetLength = $tweetText.val().length;
     const url = $form.attr('action');
-    const $message = $('.error-message');
     if (!tweetLength) {
-      alert("Please write your Tweet before submission!")
+      $message.text("Please write your Tweet before submission!");
+      $message.show();
     } else if (tweetLength > 140) {
-      alert("You can't go over 140 characters!")
+      $message.text("You can't go over 140 characters!");
+      $message.show();
     } else {
       $.post(url, $form.serialize())
         .then(data => {
