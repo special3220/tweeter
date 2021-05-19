@@ -1,52 +1,52 @@
-article {
+article.tweet {
   border: 5px solid #545149;
   margin: 2% 0;
   padding: 2% 2%;
 }
 
-article:hover {
+article.tweet:hover {
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
-article > header {
+article.tweet  header {
   background-color:#f4f1ec;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-article > header > div:first-child {
+article.tweet header > div:first-child {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-article > header > div:nth-child(2) {
+article.tweet header > div:nth-child(2) {
   opacity: 0.5;
 }
 
-article > p {
+article.tweet p {
   margin-bottom: 0.3em;
   padding: 1.3em 0.5em;
   font-weight: 600;
   border-bottom: 5px solid #545149;
 }
 
-article > header img {
+article.tweet header img {
   max-width: 80px;
   padding-right: 0.5em;
 }
 
-article > footer {
+article.tweet footer {
   font-size: 0.7em;
   display: flex;
   justify-content: space-between;
   padding: 0 0.5em; 
 }
-article > footer > div:nth-child(2) > i {
+article footer div:nth-child(2) > i {
   padding: 0 .2em;
 }
-article > footer > div:nth-child(2) > i:hover {
+article footer > div:nth-child(2) > i:hover {
   color: goldenrod;
   cursor: pointer;
 }
