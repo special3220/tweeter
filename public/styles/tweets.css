@@ -43,6 +43,12 @@ article.tweet footer {
   justify-content: space-between;
   padding: 0 0.5em; 
 }
+
+article.tweet p {
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
 article footer div:nth-child(2) > i {
   padding: 0 .2em;
 }
