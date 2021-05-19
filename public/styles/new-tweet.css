@@ -41,7 +41,14 @@
 .form-button {
   padding: .5%;
   background-color: #4056A1;
-  color: #FFF;
+  border: 2px solid #FFF;
+  color: #ddebe0;
+  transition: border 0.2s;
+}
+.form-button:hover {
+  cursor: pointer;
+  background-color: lightseagreen;
+  border: 2px solid #4056A1;
 }
 
 .error-message {
