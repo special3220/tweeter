@@ -12,7 +12,7 @@
   padding: 0 1%;
 }
 
-form textarea {
+#tweet-form textarea {
   font-weight: 600;
   border: none;
   resize: none;
@@ -20,7 +20,7 @@ form textarea {
   border-bottom: 5px solid #545149;
 }
 
-form textarea:focus{
+#tweet-form textarea:focus{
   outline: none;
 }
 
@@ -28,13 +28,13 @@ form textarea:focus{
   color: red;
 }
 
-form > div {
+#tweet-form > div {
   display: flex;
   justify-content: space-between;
   font-family: "Bungee", sans-serif;
 }
 
-form > div > .counter {
+#tweet-form > div > .counter {
   padding-right: 0.5em;
 }
 
@@ -59,12 +59,3 @@ form > div > .counter {
   width: 100%;
   background-color:#ff0033;
 }
-
-/* .error-message {
-  text-align: center;
-  color: #FFF;
-  padding: 0.2em;
-  margin-bottom: 0.5em;
-  width: 100%;
-  background-color: red ;
-} */
