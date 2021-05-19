@@ -27,36 +27,41 @@ const createTweetElement = function (tweet) {
   return $tweet;
 }
 
-const renderTweets = function(tweets) {
+const renderTweets = function (tweets) {
   // loops through tweets
-  for(const tweet of tweets){
+  for (const tweet of tweets) {
     // calling createTweetElement to create tweet element
     const tweetElem = createTweetElement(tweet);
     // Appending tweet element to the tweet container
     $('#tweets-container').prepend(tweetElem);
   }
 }
-const loadTweets = function() {
-  $.get('/tweets', function(data) {
+const loadTweets = function () {
+  $.get('/tweets', function (data) {
     renderTweets(data)
   })
 }
 
 $(document).ready(function () {
   loadTweets();
-  $("#tweet-form").submit(function(e){
+  $("#tweet-form").submit(function (e) {
     e.preventDefault();
     const $form = $(this);
     const $tweetText = $form.find("textarea");
+    const tweetLength = $tweetText.val().length;
     const url = $form.attr('action');
-    console.log($form.serialize());
-    let posting = $.post(url, $form.serialize());
-    $tweetText.val('');
+    if (!tweetLength) {
+      alert("Please write your Tweet before submission!")
+    } else if (tweetLength > 140) {
+      alert("You can't go over 140 characters!")
+    } else {
+      let posting = $.post(url, $form.serialize());
+      $tweetText.val('')
+      posting.done(function () {
+        $('#tweets-container').empty();
+        loadTweets();
+      })
+    }
 
-    posting.done(function(){
-      $('#tweets-container').empty();
-      loadTweets();
-    })
-    
   })
 })
