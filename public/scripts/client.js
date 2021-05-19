@@ -5,6 +5,15 @@
  */
 
 const createTweetElement = function (tweet) {
+
+  // Function to prevent Cross-Site Scripting
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+  const safeText = escape(tweet.content.text);
+  
   // creates and return HTML for each tweet
   const $tweet = $(`<article class="tweet">
                       <header>
@@ -14,7 +23,7 @@ const createTweetElement = function (tweet) {
                         </div>
                         <div><span>${tweet.user.handle}</span></div>
                       </header>
-                      <p>${tweet.content.text}</p>
+                      <p>${safeText}</p>
                       <footer>
                         <div><span>${timeago.format(tweet.created_at)}</span></div>
                         <div>
@@ -62,6 +71,5 @@ $(document).ready(function () {
           $('#tweets-container').prepend(newTweet);
         })
     }
-
   })
 })
