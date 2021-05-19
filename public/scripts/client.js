@@ -47,10 +47,11 @@ $(document).ready(function () {
   $("#tweet-form").submit(function(e){
     e.preventDefault();
     const $form = $(this);
-    const tweetText = $form.find("textarea").val();
+    const $tweetText = $form.find("textarea");
     const url = $form.attr('action');
     console.log($form.serialize());
-    let posting = $.post(url, $form.serialize())
+    let posting = $.post(url, $form.serialize());
+    $tweetText.val('');
 
     posting.done(function(){
       $('#tweets-container').empty();
