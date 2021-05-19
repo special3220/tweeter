@@ -1,5 +1,4 @@
 $(document).ready(function () {
-  console.log("Connected")
   $('#tweet-text').on("input", function (e) {
     let $charLimit = 140;
     let $inputLength = $(this).val().length;
