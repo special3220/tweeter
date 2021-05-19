@@ -61,7 +61,7 @@ $(document).ready(function () {
     const $tweetText = $form.find("textarea");
     // Hiding error message when use starts inputing again
     $tweetText.on("input", () => $message.fadeOut(500));
-    const tweetLength = $tweetText.val().length;
+    const tweetLength = $tweetText.val().trim().length;
     const url = $form.attr('action');
     if (!tweetLength) {
       $message.text("Please write your Tweet before submission!");
