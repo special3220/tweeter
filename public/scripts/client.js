@@ -13,7 +13,7 @@ const createTweetElement = function (tweet) {
     return div.innerHTML;
   };
   const safeText = escape(tweet.content.text);
-  
+
   // creates and return HTML for each tweet
   const $tweet = $(`<article class="tweet">
                       <header>
@@ -59,6 +59,7 @@ $(document).ready(function () {
     const $tweetText = $form.find("textarea");
     const tweetLength = $tweetText.val().length;
     const url = $form.attr('action');
+    const $message = $('.error-message');
     if (!tweetLength) {
       alert("Please write your Tweet before submission!")
     } else if (tweetLength > 140) {
@@ -67,6 +68,7 @@ $(document).ready(function () {
       $.post(url, $form.serialize())
         .then(data => {
           $tweetText.val('');
+          // $message.hide();
           let newTweet = createTweetElement(data);
           $('#tweets-container').prepend(newTweet);
         })

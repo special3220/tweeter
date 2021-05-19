@@ -58,8 +58,9 @@
   <!-- Page-specific (main) content here -->
   <main class="container">
     <section class="new-tweet">
-      <h2>Compose Tweet</h2>
+      <div class="error-message">You cant have an Empty Tweet!</div>
       <form id="tweet-form" method="POST" action="/tweets">
+        <h2>Compose Tweet</h2>
         <textarea placeholder="What are you humming about?" name="text" id="tweet-text" required></textarea>
         <hr>
         <div>
