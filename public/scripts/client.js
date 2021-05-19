@@ -76,6 +76,7 @@ $(document).ready(function () {
           // $message.hide();
           let newTweet = createTweetElement(data);
           $('#tweets-container').prepend(newTweet);
+          $('.counter').val(140);
         })
     }
   })
