@@ -55,12 +55,12 @@ $(document).ready(function () {
     } else if (tweetLength > 140) {
       alert("You can't go over 140 characters!")
     } else {
-      let posting = $.post(url, $form.serialize());
-      $tweetText.val('')
-      posting.done(function () {
-        $('#tweets-container').empty();
-        loadTweets();
-      })
+      $.post(url, $form.serialize())
+        .then(data => {
+          $tweetText.val('');
+          let newTweet = createTweetElement(data);
+          $('#tweets-container').prepend(newTweet);
+        })
     }
 
   })
