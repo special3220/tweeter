@@ -63,6 +63,7 @@ body {
 
  @media screen and (max-width: 799px) {
    main{
+     padding: 0;
      flex-direction: column;
      justify-content: center;
    }
@@ -71,5 +72,6 @@ body {
    }
    .form-tweets {
      width: 100%;
+     padding: 0 2em;
    }
  }
