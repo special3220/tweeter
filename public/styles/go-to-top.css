@@ -4,7 +4,7 @@
    bottom: 5vh;
    right: 1.5vw;
    z-index: 99;
-   padding: 0.2em 0.4em;
+   padding: 0.1rem 0.7rem;
    outline: none;
    border: none;
    background-color: lightsalmon;
@@ -22,7 +22,7 @@
   font-family: FontAwesome;
   font-weight: normal;
   font-style: normal;
-  font-size: 2em;
+  font-size: 2rem;
   line-height: 50px;
   color: #fff;
 }

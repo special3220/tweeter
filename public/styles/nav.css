@@ -38,7 +38,7 @@ nav button {
   align-items: center;
   border: none;
   color: #FFF;
-  background-color: #4056A1;
+  background-color: transparent;
 }
 nav button:hover {
   cursor: pointer;

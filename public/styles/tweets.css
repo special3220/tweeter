@@ -33,6 +33,7 @@ article.tweet header > div:nth-child(2) {
 article.tweet p {
   margin-bottom: 0.3em;
   padding: 1.3em 0.5em;
+  font-size: 1.5rem;
   font-weight: 600;
   border-bottom: 5px solid #545149;
 }
@@ -42,8 +43,13 @@ article.tweet header img {
   padding-right: 0.5em;
 }
 
+article.tweet header span {
+  font-size: 1.3rem;
+}
+
+
 article.tweet footer {
-  font-size: 0.7em;
+  font-size: 0.7rem;
   display: flex;
   justify-content: space-between;
   padding: 0 0.5em; 
