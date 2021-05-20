@@ -69,9 +69,19 @@ body {
    }
    .profile-header {
      width: 100%;
+     margin-top: 3em;
    }
    .form-tweets {
      width: 100%;
      padding: 0 2em;
+   }
+   nav {
+    background-color: #b86e00;
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+    /* z-index: -1; */
+   }
+   
+   body {
+     padding-top: 0;
    }
  }
