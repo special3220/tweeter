@@ -1,9 +1,8 @@
-console.log("js file is connected")
+console.log("js file is connected");
 
 $(document).ready(function() {
-  const root = document.documentElement;
-  const btn = $('#toTop')
-
+  const btn = $('#toTop');
+// brining button to view based on scrolling down by adding/removing css class
   $(window).scroll(function() {
     if ($(window).scrollTop() > 300) {
       btn.addClass('show');
@@ -14,6 +13,6 @@ $(document).ready(function() {
   function scrollToTop() {
     $('html, body').animate({scrollTop:0}, '400');
   }
-  $('#toTop').on("click", scrollToTop)
-})
+  $('#toTop').on("click", scrollToTop);
+});
 
