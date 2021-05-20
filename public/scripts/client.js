@@ -53,8 +53,14 @@ const loadTweets = function() {
 
 $(document).ready(function() {
   const $message = $('.error-message span');
+  const $newTweet = $('.new-tweet')
+  $newTweet.hide();
   $message.hide();
   loadTweets();
+  $('nav button').on('click', function() {
+    $newTweet.slideToggle(500);
+    $('#tweet-text').focus();
+  })
   $("#tweet-form").submit(function(e) {
     e.preventDefault();
     const $form = $(this);
