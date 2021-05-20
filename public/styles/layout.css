@@ -44,11 +44,33 @@ body {
 
  body > footer {
    width: 100%;
-   height: 200px;
-   background-color: gray;
+   height: 100px;
+   background-color: teal;
    display: flex;
+   flex-direction: column;
    justify-content: center;
    align-items: center;
+ }
+ .footer-icons {
+   width: 100px;
+   display: flex;
+   justify-content: space-around;
+   font-size: 2rem;
+ }
+ .footer-icons i {
+   color: whitesmoke;
+   transition: color 0.5s;
+ }
+ .footer-icons i:hover {
+  cursor: pointer;
+  color:#65c96d
+}
+
+ .author {
+   font-size: 1.2rem;
+   margin-top: 10px;
+   color: whitesmoke;
+   font-weight: 600;
  }
 /* 
  footer > div {
@@ -80,13 +102,18 @@ body {
 
    body {
      padding-top: 0;
+   }
+   html {
      font-size: 14px;
    }
  }
 
-/* For really small mobile devices */
+/* For really small Mobile Devices */
 
  @media screen and (max-width: 499px) {
+  html {
+    font-size: 12px;
+  }
    nav {
      flex-direction: column;
      justify-content: space-evenly;
@@ -98,7 +125,4 @@ body {
   .form-tweets {
     padding: 0 0.5em;
   }
-  article.tweet p{
-    font-size: 1.2rem;
-  }
- }
+}
