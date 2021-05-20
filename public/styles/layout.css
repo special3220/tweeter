@@ -134,4 +134,7 @@ body {
   body > footer {
     height: 80px;
   }
+#tweet-form textarea::placeholder{
+    font-size: 1.3rem;
+  }
 }
