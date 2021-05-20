@@ -4,10 +4,10 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-const createTweetElement = function(tweet) {
+const createTweetElement = function (tweet) {
 
   // Function to prevent Cross-Site Scripting
-  const escape = function(str) {
+  const escape = function (str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
@@ -36,7 +36,7 @@ const createTweetElement = function(tweet) {
   return $tweet;
 };
 
-const renderTweets = function(tweets) {
+const renderTweets = function (tweets) {
   // loops through tweets
   for (const tweet of tweets) {
     // calling createTweetElement to create tweet element
@@ -45,23 +45,23 @@ const renderTweets = function(tweets) {
     $('#tweets-container').prepend(tweetElem);
   }
 };
-const loadTweets = function() {
-  $.get('/tweets', function(data) {
+const loadTweets = function () {
+  $.get('/tweets', function (data) {
     renderTweets(data);
   });
 };
 
-$(document).ready(function() {
+$(document).ready(function () {
   const $message = $('.error-message span');
   const $newTweet = $('.new-tweet')
   $newTweet.hide();
   $message.hide();
   loadTweets();
-  $('nav button').on('click', function() {
+  $('nav button').on('click', function () {
     $newTweet.slideToggle(500);
     $('#tweet-text').focus();
   })
-  $("#tweet-form").submit(function(e) {
+  $("#tweet-form").submit(function (e) {
     e.preventDefault();
     const $form = $(this);
     const $tweetText = $form.find("textarea");

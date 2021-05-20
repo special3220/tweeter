@@ -26,11 +26,12 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://kit.fontawesome.com/4cfb43502c.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"></script>
-  
+
 
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+  <script type="text/javascript" src="/scripts/go-to-top.js"></script>
 </head>
 
 <body>
@@ -41,7 +42,7 @@
     </div>
 
     <div>
-      <button> 
+      <button>
         <span><strong>Write</strong> a new tweet</span>
         <i class="fas fa-angle-double-down"></i>
       </button>
@@ -78,9 +79,10 @@
   </main>
   <footer>
     <div>Temp Footer</div>
-    <button class="go-to-top">TOP</button>
-    
-    </footer>
+    <button id="toTop">
+    </button>
+
+  </footer>
 </body>
 
 </html>
