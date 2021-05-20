@@ -5,14 +5,12 @@
   flex-direction: column;
   justify-content: center;
 }
-
 .new-tweet form {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 0 1%;
 }
-
 #tweet-form textarea {
   font-weight: 600;
   border: none;
@@ -20,25 +18,20 @@
   background-color: #f4f1ec;
   border-bottom: 5px solid #545149;
 }
-
 #tweet-form textarea:focus{
   outline: none;
 }
-
 .over-limit {
   color: red;
 }
-
 #tweet-form > div {
   display: flex;
   justify-content: space-between;
   font-family: "Bungee", sans-serif;
 }
-
 #tweet-form > div > .counter {
   padding-right: 0.5em;
 }
-
 .form-button {
   padding: .5%;
   background-color: #4056A1;
@@ -51,7 +44,6 @@
   background-color: lightseagreen;
   border: 2px solid #4056A1;
 }
-
 .error-message {
   height: 1.5em;
   text-align: center;
@@ -60,7 +52,6 @@
   margin-bottom: 0.5em;
   width: 100%;
 }
-
 .error-message > span {
   padding: 0.2em 2em;
   margin-bottom: 0.5em;

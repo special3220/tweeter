@@ -10,12 +10,10 @@
   align-items: center;
   width: 35%;
 }
-
 .profile-header img {
   width: 100%;
   height: auto;
 }
-
 .profile-header h2 {
   margin-top: 0;
   font-size: 2rem;
