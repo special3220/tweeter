@@ -67,7 +67,7 @@ body {
    }
    .profile-header {
      width: 100%;
-     margin-top: 4.4em;
+     margin-top: 3.6rem;
    }
    .form-tweets {
      width: 100%;
@@ -82,4 +82,23 @@ body {
      padding-top: 0;
      font-size: 14px;
    }
+ }
+
+/* For really small mobile devices */
+
+ @media screen and (max-width: 499px) {
+   nav {
+     flex-direction: column;
+     justify-content: space-evenly;
+     height: 115px;
+   }
+.profile-header { 
+   margin-top: 5.6rem;
+  }
+  .form-tweets {
+    padding: 0 0.5em;
+  }
+  article.tweet p{
+    font-size: 1.2rem;
+  }
  }

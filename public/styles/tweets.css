@@ -36,6 +36,8 @@ article.tweet p {
   font-size: 1.5rem;
   font-weight: 600;
   border-bottom: 5px solid #545149;
+  overflow: hidden;
+  word-wrap: break-word;
 }
 
 article.tweet header img {
@@ -53,11 +55,6 @@ article.tweet footer {
   display: flex;
   justify-content: space-between;
   padding: 0 0.5em; 
-}
-
-article.tweet p {
-  overflow: hidden;
-  word-wrap: break-word;
 }
 
 article footer div:nth-child(2) > i {
