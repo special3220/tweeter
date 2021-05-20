@@ -44,4 +44,25 @@ body {
    width: 100%;
    height: 200px;
    background-color: gray;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+
+ .go-to-top {
+   position: fixed;
+   bottom: 5vh;
+   right: 1.5vw;
+   z-index: 99;
+   padding: 0.3em;
+   outline: none;
+   border: none;
+   background-color: lightsalmon;
+   border-radius: 15%;
+   color: white;
+   cursor: pointer;
+ }
+
+ footer > div {
+   margin: auto;
  }
