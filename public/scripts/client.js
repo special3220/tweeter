@@ -4,7 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-const createTweetElement = function (tweet) {
+const createTweetElement = function(tweet) {
 
   // Function to prevent Cross-Site Scripting
   const escape = function (str) {
@@ -35,8 +35,8 @@ const createTweetElement = function (tweet) {
                     </article>`);
   return $tweet;
 };
-
-const renderTweets = function (tweets) {
+// creates tweet contents and adds their HTML.
+const renderTweets = function(tweets) {
   // loops through tweets
   for (const tweet of tweets) {
     // calling createTweetElement to create tweet element
@@ -45,23 +45,28 @@ const renderTweets = function (tweets) {
     $('#tweets-container').prepend(tweetElem);
   }
 };
-const loadTweets = function () {
+// used for initial loading of tweets from Database
+const loadTweets = function() {
   $.get('/tweets', function (data) {
     renderTweets(data);
   });
 };
 
-$(document).ready(function () {
+$(document).ready(function() {
   const $message = $('.error-message span');
   const $newTweet = $('.new-tweet')
-    $newTweet.hide();
+  //Initially hiding error message and new tweets from from view
+  $newTweet.hide();
   $message.hide();
+  // Loading tweets from datase.
   loadTweets();
-  $('nav button').on('click', function () {
+  // clicking the nav button brings the add tweet form for use
+  $('nav button').on('click', function() {
     $newTweet.slideToggle(500);
     $('#tweet-text').focus();
   })
-  $("#tweet-form").submit(function (e) {
+  // Submitting form Data
+  $("#tweet-form").submit(function(e) {
     e.preventDefault();
     const $form = $(this);
     const $tweetText = $form.find("textarea");
