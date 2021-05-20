@@ -54,7 +54,7 @@ const loadTweets = function () {
 $(document).ready(function () {
   const $message = $('.error-message span');
   const $newTweet = $('.new-tweet')
-  $newTweet.hide();
+  // $newTweet.hide();
   $message.hide();
   loadTweets();
   $('nav button').on('click', function () {

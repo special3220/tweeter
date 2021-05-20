@@ -16,7 +16,7 @@ html {
  */
 
 body {
-  padding-top: 105px;
+  padding-top: 120px;
   color: #545149;
   background-color: #f4f1ec;
   font-family: 'Source Sans Pro', 'sans-serif';
@@ -28,12 +28,18 @@ body {
  */
 
  main {
-   width: 90%;
-   margin: auto;
    background-color: #f4f1ec;
+   width: 100%;
+   padding: 0 2em;
+   display: flex;
+   justify-content: space-between;
+ }
+
+ .form-tweets {
    display: flex;
    flex-direction: column;
-   /* justify-content: center; */
+   align-items: center;
+   width: 60%;
  }
 
  main h2 {
@@ -48,9 +54,16 @@ body {
    justify-content: center;
    align-items: center;
  }
-
-
 /* 
  footer > div {
    margin: auto;
  } */
+
+ /* Media Queries */
+
+ @media screen and (min-width: 600px) {
+  .profile-header {
+    width: 30%;
+  }
+
+ }

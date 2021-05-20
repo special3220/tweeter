@@ -41,42 +41,41 @@
     <div>
       <span class="logo">tweeter</span>
     </div>
-
     <div>
       <button>
         <span><strong>Write</strong> a new tweet</span>
         <i class="fas fa-angle-double-down"></i>
       </button>
-      <!-- <span>Write a new tweet</span> -->
-      <!-- <i class="fas fa-angle-double-down"></i> -->
     </div>
   </nav>
-  <header class="profile-header">
-    <div>
-      <img class="img" src="/images/profile-hex.png">
-    </div>
-    <br>
-    <div>
-      <h2>Timo Werner</h2>
-    </div>
-  </header>
-
   <!-- Page-specific (main) content here -->
   <main class="container">
-    <section class="new-tweet">
-      <div class="error-message"><span></span></div>
-      <form id="tweet-form" method="POST" action="/tweets">
-        <textarea placeholder="What are you humming about?" name="text" id="tweet-text"></textarea>
-        <hr>
-        <div>
-          <button class="form-button" type="submit">Tweet</button>
-          <output name="counter" class="counter" for="tweet-text">140</output>
-        </div>
-      </form>
-    </section>
+    <header class="profile-header">
+      <div>
+        <img class="img" src="/images/profile-hex.png">
+      </div>
+      <br>
+      <div>
+        <h2>Timo Werner</h2>
+      </div>
+    </header>
+    <div class="form-tweets">
+      <section class="new-tweet">
+        <div class="error-message"><span></span></div>
+        <form id="tweet-form" method="POST" action="/tweets">
+          <textarea placeholder="What are you humming about?" name="text" id="tweet-text"></textarea>
+          <hr>
+          <div>
+            <button class="form-button" type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
 
-    <section id="tweets-container">
-    </section>
+      <section id="tweets-container">
+      </section>
+
+    </div>
   </main>
   <footer>
     <div>Temp Footer</div>
