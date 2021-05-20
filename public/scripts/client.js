@@ -86,7 +86,7 @@ $(document).ready(function() {
           $tweetText.val('');
           // $message.hide();
           let newTweet = createTweetElement(data);
-          $('#tweets-container').prepend(newTweet);
+          $('#tweets-container').prepend(newTweet).fadeIn();
           $('.counter').val(140);
         });
     }
