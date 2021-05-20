@@ -1,100 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <!-- Meta Information -->
-  <title>Tweeter - Home Page</title>
-
-  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
-  <!-- External CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+	<head>
+		<!-- Meta Information -->
+		<title>Tweeter - Home Page</title>
+		<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+		<!-- External CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     type="text/css" />
-
-  <!-- App Fonts -->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link
+		<!-- App Fonts -->
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+			<link
     href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap"
     rel="stylesheet">
-
-  <!-- App CSS -->
-  <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
-  <link rel="stylesheet" href="/styles/header.css" type="text/css" />
-  <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
-  <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
-  <link rel="stylesheet" href="/styles/go-to-top.css" type="text/css" />
-  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-
-  <!-- External JS -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://kit.fontawesome.com/4cfb43502c.js" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"></script>
-
-
-  <!-- App JS -->
-  <script type="text/javascript" src="/scripts/client.js"></script>
-  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-  <script type="text/javascript" src="/scripts/go-to-top.js"></script>
-</head>
-
-<body>
-  <!-- Top nav bar (fixed) -->
-  <nav>
-    <div>
-      <span class="logo">tweeter</span>
-    </div>
-    <div>
-      <button>
-        <span><strong>Write</strong> a new tweet</span>
-        <i class="fas fa-angle-double-down"></i>
-      </button>
-    </div>
-  </nav>
-  <!-- Page-specific (main) content here -->
-  <main class="container">
-    <header class="profile-header">
-      <div>
-        <img src="/images/profile-hex.png" alt="Profile Avatar">
-      </div>
-      <br>
-      <div>
-        <h2>Timo Werner</h2>
-      </div>
-    </header>
-    <div class="form-tweets">
-      <section class="new-tweet">
-        <div class="error-message"><span></span></div>
-        <form id="tweet-form" method="POST" action="/tweets">
-          <textarea placeholder="What are you humming about?" name="text" id="tweet-text"></textarea>
-          <hr>
-          <div>
-            <button class="form-button" type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
-      </section>
-
-      <section id="tweets-container">
-      </section>
-
-    </div>
-  </main>
-  <footer>
-    <section class="footer-icons">
-      <!-- Linkedin -->
-      <a href="https://www.linkedin.com/in/tawfiqulhasankhan/"
-        role="button"><i class="fab fa-linkedin-in"></i></a>
-      <!-- Github -->
-      <a href="https://github.com/special3220" role="button"><i
-          class="fab fa-github"></i></a>
-    </section>
-    <div class="author">
+				<!-- App CSS -->
+				<link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+				<link rel="stylesheet" href="/styles/header.css" type="text/css" />
+				<link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+				<link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
+				<link rel="stylesheet" href="/styles/go-to-top.css" type="text/css" />
+				<link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+				<!-- External JS -->
+				<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+				<script src="https://kit.fontawesome.com/4cfb43502c.js" crossorigin="anonymous"></script>
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"></script>
+				<!-- App JS -->
+				<script type="text/javascript" src="/scripts/client.js"></script>
+				<script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+				<script type="text/javascript" src="/scripts/go-to-top.js"></script>
+			</head>
+			<body>
+				<!-- Top nav bar (fixed) -->
+				<nav>
+					<div>
+						<span class="logo">tweeter</span>
+					</div>
+					<div>
+						<button>
+							<span>
+								<strong>Write</strong> a new tweet
+							</span>
+							<i class="fas fa-angle-double-down"></i>
+						</button>
+					</div>
+				</nav>
+				<!-- Page-specific (main) content here -->
+				<main class="container">
+					<header class="profile-header">
+						<div>
+							<img src="/images/profile-hex.png" alt="Profile Avatar">
+							</div>
+							<br>
+								<div>
+									<h2>Timo Werner</h2>
+								</div>
+							</header>
+							<div class="form-tweets">
+								<section class="new-tweet">
+									<div class="error-message">
+										<span></span>
+									</div>
+									<form id="tweet-form" method="POST" action="/tweets">
+										<textarea placeholder="What are you humming about?" name="text" id="tweet-text"></textarea>
+										<hr>
+											<div>
+												<button class="form-button" type="submit">Tweet</button>
+												<output name="counter" class="counter" for="tweet-text">140</output>
+											</div>
+										</form>
+									</section>
+									<section id="tweets-container"></section>
+								</div>
+							</main>
+							<footer>
+								<section class="footer-icons">
+									<!-- Linkedin -->
+									<a href="https://www.linkedin.com/in/tawfiqulhasankhan/"
+        role="button">
+										<i class="fab fa-linkedin-in"></i>
+									</a>
+									<!-- Github -->
+									<a href="https://github.com/special3220" role="button">
+										<i
+          class="fab fa-github"></i>
+									</a>
+								</section>
+								<div class="author">
       Created by, Md Tawfiqul Hasan Khan
     </div>
-    <!-- Button to go top -->
-    <button id="toTop">
-    </button>
-
-  </footer>
-</body>
-
-</html>
+								<!-- Button to go top -->
+								<button id="toTop"></button>
+							</footer>
+						</body>
+					</html>
