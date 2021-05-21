@@ -7,6 +7,8 @@ The app was created using a starter coode provided by lighouse labs. The app is 
 
 ## Final Product
 
+!["Homepage"](https://github.com/special3220/tweeter/blob/master/public/docs/homepage.jpeg?raw=true)
+!["responsive"](https://github.com/special3220/tweeter/blob/master/public/docs/responsive.jpeg?raw=true)
 
 ## Getting Started
 
